@@ -1,21 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,700;1,300;1,700&display=swap");
+
 .logo{
     position: absolute;
     width: 61.09px;
     height: 19px;
     left: 0px;
     top: 0px;
-    background: #0065FC;
 }
-h1{
-    position: absolute;
-    width: 575px;
-    height: 26px;
-    left: 55px;
-    top: 126px;
+
+main{
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
+    color: #000000;
+}
+
+h1{
     font-size: 22px;
     line-height: 26px;
-    color: #000000;
+}
+
+h2{
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
 }

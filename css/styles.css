@@ -1,0 +1,21 @@
+.logo{
+    position: absolute;
+    width: 61.09px;
+    height: 19px;
+    left: 0px;
+    top: 0px;
+    background: #0065FC;
+}
+h1{
+    position: absolute;
+    width: 575px;
+    height: 26px;
+    left: 55px;
+    top: 126px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000000;
+}

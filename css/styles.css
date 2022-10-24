@@ -1,27 +1,536 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,700;1,300;1,700&display=swap");
 
-.logo{
-    position: absolute;
-    width: 61.09px;
-    height: 19px;
-    left: 0px;
-    top: 0px;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+:root {
+  box-sizing: border-box;
 }
 
-main{
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    color: #000000;
+/* global */
+
+* {
+  font-family: "Raleway", "calibri", "font family";
+  color: black;
 }
 
-h1{
-    font-size: 22px;
-    line-height: 26px;
+body {
+  max-width: 1440px;
+  margin: auto;
 }
 
-h2{
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
+main {
+  margin: auto;
+  padding: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 23px;
+}
+
+h2 {
+  font-size: 21px;
+}
+
+h3 {
+  font-size: 17px;
+}
+
+a {
+  text-decoration: none;
+}
+:root {
+  --block-padding: 38px;
+}
+
+/* PARTIE TOP // header*/
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 50px;
+}
+
+/*navigation*/
+
+.logo {
+  height: 19px;
+}
+.navbar-container {
+  display: flex;
+}
+.navbar-item {
+  padding: 45px;
+  border-top: 3px solid transparent;
+}
+.navbar-item:hover,
+.navbar-item.active {
+  border-color: #0065fc;
+  color: #0065fc;
+  text-decoration: none;
+}
+
+/* search section*/
+
+.slogan {
+  font-weight: bolder;
+}
+.slogan-under {
+  margin-top: -10px;
+}
+/*search section*/
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 49px;
+  width: 320px;
+  border: 1px solid #d9d9d9;
+  border-right: none;
+  border-radius: 15px;
+}
+.fa-location-dot {
+  background-color: #d9d9d9;
+  height: 49px;
+  width: 50px;
+  border-radius: 15px 0 0 15px;
+  padding: 15px;
+  
+}
+
+.search-form input {
+  width: 70%;
+  height: 100%;
+  border: none;
+  font-weight: bold;
+  padding-left: 15px;
+}
+::placeholder {
+  color: #000;
+}
+.search-form button {
+  background-color: #0065fc;
+  font-weight: bold;
+  height: 49px;
+  width: 120px;
+  border: none;
+  border-radius: 0 15px 15px 0;
+}
+.search-btn-txt {
+  color: #fff;
+}
+.search-form button .fa-search {
+  display: none;
+}
+
+/* partie filtres*/
+.filter {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-top: 40px;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-radius: 50px;
+  border: 2px solid #f2f2f2;
+  background-color: #ffff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  padding-right: 20px;
+  padding-left: 0px;
+  transition-duration: 0.4s;
+  border-left: none;
+}
+.btn-label {
+  margin-left: 10px;
+}
+.filter-btn:hover {
+  background-color: #deebff;
+}
+.Icone {
+  width: 50px;
+  height: 50px;
+  color: #0065fc;
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 2px;
+}
+
+/* info line*/
+.info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.IconeInfo {
+  width: 25px;
+  height: 20px;
+  border-radius: 50px;
+  border: 2px solid #f2f2f2;
+  background-color: #fff;
+  color: #0065fc;
+  padding-left: 8px;
+}
+
+/*Partie Hotels*/
+
+.hébergements {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin: 10px 0;
+}
+
+.mhotels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 69%;
+  border-radius: 25px;
+  padding: var(--block-padding);
+  background-color: #f2f2f2;
+}
+.mars-hotels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* cards hotels page accommodation */
+
+.card-booki {
+  background-color: #ffff;
+  border: 5px solid #ffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add shadows to create the "card" effect */
+  transition: 0.3s;
+}
+
+.card-vert {
+  height: 210px;
+  width: 246px;
+}
+.card-vert img {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+}
+.card-container {
+  margin: 5px;
+}
+.card-container p {
+  margin: 2px;
+}
+.card-booki:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.bluestar {
+  color: #0065fc;
+}
+.greystar {
+  color: #d9d9d9;
+}
+.followup {
+  margin-top: 30px;
+}
+
+/*partie aside - populaires*/
+
+.pop-mars {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  padding: var(--block-padding);
+  background-color: #f2f2f2;
+}
+.pop-mars-title {
+  display: flex;
+  justify-content: space-between;
+}
+.pop-hotels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.card-hor {
+  display: flex;
+  width: 340px;
+  height: 150px;
+}
+.card-hor img {
+  width: 130px;
+  height: 100%;
+  object-fit: cover;
+}
+.card-hor-text {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.card-hor-text p {
+  margin: 0px;
+}
+
+.card-hor-star {
+  padding-top: 45px;
+}
+/*partie activités*/
+.activites {
+  display: flex;
+  flex-direction: column;
+}
+.card-activites {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+.act-card-title {
+  margin-left: 20px;
+  font-weight: bold;
+}
+.activite-card-one {
+  width: 25%;
+  min-width: 150px;
+}
+
+.img-activite-big {
+  border: none;
+  height: 445px;
+}
+.img-activite-big img {
+  height: 390px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-activites-double {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  min-width: 150px;
+  gap: 45px;
+}
+.act-img-xl {
+  height: 235px;
+  border: none;
+}
+.act-img-xl img {
+  height: 181px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.act-img-small {
+  border: none;
+  height: 165px;
+}
+.act-img-small img {
+  height: 110px;
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.act-img-medium {
+  border: none;
+  height: 195px;
+}
+
+.act-img-medium img {
+  height: 139px;
+  width: 100%;
+  object-position: top;
+  object-fit: cover;
+}
+
+.act-img-large {
+  border: none;
+  height: 205px;
+}
+.act-img-large img {
+  height: 154px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*partie du footer */
+
+.footer {
+  background-color: #f2f2f2;
+  display: flex;
+  margin-top: 40px;
+  padding: 45px;
+}
+
+.footer-item {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* Partie media Queries*/
+
+/* version tablette*/
+@media (max-width: 992px) {
+  .hébergements {
+    flex-direction: column;
+  }
+  .mhotels {
+    width: fit-content;
+  }
+  .card-vert {
+    width: 280px;
+  }
+  .mars-hotels {
+    justify-content: center;
+  }
+  .card-activites {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  .act-card-title {
+    margin: 10px;
+  }
+}
+
+/* version mobile*/
+@media (max-width: 767px) {
+  :root {
+    --block-padding: 20px;
+  }
+  main {
+    padding: 0px;
+    margin: 0px;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar-item {
+    border-top: 0px;
+    border-bottom: 2px solid #d9d9d9;
+    text-decoration: none;
+    padding-bottom: 10px;
+  }
+  .search,
+  .search-form,
+  .filter,
+  .info {
+    margin: 20px;
+  }
+  .search-form {
+    width: auto;
+  }
+  .filter {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .search-form button {
+    border-radius: 15px 15px 15px 15px;
+    width: 60px;
+  }
+  .search-btn-txt {
+    display: none;
+  }
+  .search-form button .fa-search {
+    display: block;
+    color: #fff;
+  }
+  .hébergements {
+    flex-direction: column-reverse;
+  }
+  .mars-hotels {
+    display: flex;
+    justify-content: center;
+  }
+  .pop-mars {
+    border-radius: 0;
+  }
+  .mhotels {
+    background-color: white;
+    width: fit-content;
+  }
+
+  .card-vert {
+    width: 300px;
+  }
+
+  .filter h3 {
+    width: 100%;
+  }
+  .activites {
+    margin: 14px;
+  }
+  .card-activites {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .activite-card-one {
+    width: 100%;
+  }
+  .img-activite-big,
+  .act-img-large,
+  .act-img-medium,
+  .act-img-xl,
+  .act-img-small {
+    height: 191px;
+  }
+
+  .img-activite-big img,
+  .act-img-large img,
+  .act-img-medium img,
+  .act-img-xl img,
+  .act-img-small img {
+    height: 135px;
+    object-fit: cover;
+  }
+
+  .card-activites-double {
+    gap: 24px;
+    width: 100%;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
 }

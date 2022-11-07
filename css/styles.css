@@ -311,7 +311,7 @@ header {
 .card-activites {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
+  gap: 8%;
   margin-bottom: 40px;
 }
 .act-card-title {
@@ -523,25 +523,13 @@ a {
   .activite-card-one {
     width: 100%;
   }
-  .img-activite-big,
-  .act-img-large,
-  .act-img-medium,
-  .act-img-xl,
-  .act-img-small {
+  .img-activite-big{
     height: 191px;
   }
 
-  .img-activite-big img,
-  .act-img-large img,
-  .act-img-medium img,
-  .act-img-xl img,
-  .act-img-small img {
+  .img-activite-big img{
     height: 135px;
     object-fit: cover;
   }
 
-  .card-activites-double {
-    gap: 24px;
-    width: 100%;
-  }
 }

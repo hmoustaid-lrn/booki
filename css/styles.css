@@ -222,7 +222,7 @@ header {
 .card-booki {
   background-color: #ffff;
   border: 5px solid #ffff;
-  border-radius: 20px 20px 0 0;
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add shadows to create the "card" effect */
   transition: 0.3s;
@@ -311,14 +311,14 @@ header {
 .card-activites {
   display: flex;
   justify-content: space-between;
-  gap: 8%;
+  gap: 30px;
   margin-bottom: 40px;
 }
 .act-card-title {
   margin-left: 20px;
   font-weight: bold;
 }
-.activite-card-one {
+.activite-card {
   width: 25%;
   min-width: 150px;
 }
@@ -333,13 +333,6 @@ header {
   object-fit: cover;
 }
 
-.card-activites-double {
-  display: flex;
-  flex-direction: column;
-  width: 25%;
-  min-width: 150px;
-  gap: 45px;
-}
 .act-img-xl {
   height: 235px;
   border: none;
@@ -520,7 +513,7 @@ a {
     flex-direction: column;
     justify-content: center;
   }
-  .activite-card-one {
+  .activite-card {
     width: 100%;
   }
   .img-activite-big{
@@ -530,6 +523,13 @@ a {
   .img-activite-big img{
     height: 135px;
     object-fit: cover;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;     
   }
 
 }
